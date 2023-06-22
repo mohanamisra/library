@@ -13,12 +13,36 @@ function Book(title, author, pages, read) {
     this.read = read;
 }
 
+function makeCard(book) {
+   let card = document.createElement('div');
+
+   let cardTitle = document.createElement('div');
+   cardTitle.innerText = book.title;
+
+   let cardAuthor = document.createElement('div');
+   cardAuthor.innerText = book.author;
+
+   let cardPages = document.createElement('div');
+   cardPages.innerText = book.pages;
+
+   let cardRead = document.createElement('div');
+   cardRead.innerText = book.read;
+
+   card.appendChild(cardTitle);
+   card.appendChild(cardAuthor);
+   card.appendChild(cardPages);
+   card.appendChild(cardRead);
+
+   container.appendChild(card);
+}
+
 function readInput() {
     let title = document.getElementById('book-title').value;
     let author = document.getElementById('book-author').value;
     let pages = document.getElementById('book-pages').value;
     let read = document.getElementById('book-read').value;
     books.push(new Book(title, author, pages, read));
+    makeCard(books.pop());
 }
 
 //POP UP form mechanism
