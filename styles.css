@@ -56,6 +56,7 @@ header {
     width: 315px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
     color: #010419;
     font-weight: 900;
@@ -64,12 +65,32 @@ header {
     box-shadow: 2px 2px 4px black;
 }
 
+.form-row {
+    width: 100%;
+}
+
 .form-heading {
+    align-self: center;
     color: #f4faff;
-    text-align: center;
     font-family: 'Life Savers';
     font-size: 42px;
     text-decoration: underline;
+}
+
+#add {
+    background-color: #f9a03f;
+    border: none;
+    border-radius: 10px;
+    font-family:'Open Sans';
+    font-weight: 900;
+    font-size: 24px;
+    height: 49px;
+    width: 139px;
+    box-shadow: 3px 3px 4px black;
+}
+
+.add-button {
+    align-self: center;
 }
 
 .inactive {
