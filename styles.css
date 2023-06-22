@@ -1,6 +1,30 @@
-html, body {
+html {margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+body {
     margin: 0;
     padding: 0;
+    /* border: 2px solid red; */
+    min-height: 100vh;
+    background-image: linear-gradient(#010419, #010419, #161a3c, #353b6e, #6690b1);
+}
+
+/* HEADER STYLING */
+
+header {
+    margin: 0;
+    background-color: #010419;
+    padding: 0px 20px;
+}
+
+.heading {
+    font-family: 'Life Savers';
+    font-size: 54px;
+    text-align: center;
+    color: #f4faff;
 }
 
 .inactive {
@@ -11,4 +35,17 @@ html, body {
     width: 500px;
     display: flex;
     justify-content: space-between;
+}
+
+/* FOOTER STYLING */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    padding: 10px;
+    background-color: #010419;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color:#f4faff;
+    text-align: center;
 }
