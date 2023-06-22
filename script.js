@@ -15,6 +15,7 @@ function Book(title, author, pages, read) {
 
 function makeCard(book) {
    let card = document.createElement('div');
+   card.classList.add('card');
 
    let cardTitle = document.createElement('div');
    cardTitle.innerText = book.title;
@@ -37,6 +38,7 @@ function makeCard(book) {
 }
 
 function readInput() {
+    form.classList.add('inactive');
     let title = document.getElementById('book-title').value;
     let author = document.getElementById('book-author').value;
     let pages = document.getElementById('book-pages').value;
