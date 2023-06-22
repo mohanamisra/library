@@ -10,7 +10,7 @@
 
 <body>
     <h1>Library</h1>
-    <button id = "add">Add Book</button>
+    <button id = "add-book">Add Book</button>
     <form action = "" method = "get" class = "form inactive">
         <div class = "form-row">
             <label for = "book-title">Title</label>
@@ -26,11 +26,14 @@
         </div>
         <div class = "form-row">
             <label for = "book-read">Read Status</label>
-            <select id = "book-read" name = "book-read">
+            <select id = "book-read" name = "book-read">    
                 <option value = "no">No</option>
                 <option value = "ongoing">Reading</option>
                 <option value = "yes">Yes</option>
             </select>
+        </div>
+        <div class = "form-row">
+            <button type = "button" id = "add">Add</button>
         </div>
     </form>
 </body>
