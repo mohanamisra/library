@@ -27,14 +27,30 @@ header {
     color: #f4faff;
 }
 
-.inactive {
-    display: none;
+/* CONTENT STYLING */
+
+#add-book {
+    margin-left: 20px;
+    background-color: #f9a03f;
+    border: none;
+    border-radius: 10px;
+    font-family:'Open Sans';
+    font-weight: 900;
+    font-size: 26px;
+    text-align: center;
+    height: 45px;
+    width: 126px;
+    box-shadow: 3px 3px 4px black;
 }
 
-.card {
-    width: 500px;
-    display: flex;
-    justify-content: space-between;
+/* FORM STYLING */
+
+.form {
+    background-color: #ff7477;
+}
+
+.inactive {
+    display: none;
 }
 
 /* FOOTER STYLING */
