@@ -39,6 +39,7 @@ function makeCard(book) {
 
 function readInput() {
     form.classList.add('inactive');
+    document.querySelectorAll('body >*:not(.form)').forEach(e => e.classList.remove('blur'));
     let title = document.getElementById('book-title').value;
     let author = document.getElementById('book-author').value;
     let pages = document.getElementById('book-pages').value;
@@ -50,6 +51,7 @@ function readInput() {
 //POP UP form mechanism
 addBookButton.addEventListener('click', () => {
     form.classList.toggle('inactive');
+    document.querySelectorAll('body >*:not(.form)').forEach(e => e.classList.add('blur'));
 });
 
 addButton.addEventListener('click', readInput);
