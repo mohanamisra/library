@@ -70,6 +70,7 @@ header {
     font-family: 'Open Sans';
     padding: 5px 20px;
     box-shadow: 2px 2px 4px black;
+    border: 10px solid red;
 }
 
 input, select {

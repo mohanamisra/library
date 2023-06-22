@@ -38,7 +38,7 @@ function makeCard(book) {
 }
 
 function readInput() {
-    form.classList.add('inactive');
+    form.classList.toggle('inactive');
     document.querySelectorAll('body >*:not(.form)').forEach(e => e.classList.remove('blur'));
     let title = document.getElementById('book-title').value;
     let author = document.getElementById('book-author').value;
