@@ -16,26 +16,10 @@ function Book(title, author, pages, read) {
 
 function makeCard(book) {
    let card = document.createElement('div');
-   card.classList.add('card');
-
    let cardTitle = document.createElement('div');
-   cardTitle.innerText = book.title;
-
    let cardAuthor = document.createElement('div');
-   cardAuthor.innerText = book.author;
-
    let cardPages = document.createElement('div');
-   cardPages.innerText = book.pages;
-
    let cardRead = document.createElement('div');
-   cardRead.innerText = book.read;
-
-   card.appendChild(cardTitle);
-   card.appendChild(cardAuthor);
-   card.appendChild(cardPages);
-   card.appendChild(cardRead);
-
-   container.appendChild(card);
 }
 
 function readInput() {
