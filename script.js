@@ -26,14 +26,16 @@ function makeCard(book) {
    cardTitle.textContent = book.title;
    cardAuthor.textContent = book.author;
    cardPages.textContent = `${book.pages} Pages`;
-
-   if(book.read == 1) {
-    cardRead.innerHTML = `<img src = "images/donereading.png" alt = "reading icon" width = "60" height = "60">`
-   }
-   else {
-    cardRead.innerHTML = `<img src = "images/reading.png" alt = "reading icon" width = "60" height = "60">`
-   }
    
+   readButton(book, cardRead);
+
+//    if(book.read == 1) {
+//     cardRead.innerHTML = `<img src = "images/donereading.png" alt = "reading icon" width = "60" height = "60">`
+//    }
+//    else {
+//     cardRead.innerHTML = `<img src = "images/reading.png" alt = "reading icon" width = "60" height = "60">`
+//    }
+
    removeButton.innerHTML = `<img src = "images/remove.png" alt = "remove button" width = "31" height = "31">`
 
    card.classList.add('card');
@@ -49,7 +51,42 @@ function makeCard(book) {
    card.appendChild(cardPages);
    card.appendChild(cardRead);
    card.appendChild(removeButton);
+
+   removeButton.addEventListener('click', () => {
+    card.remove();
+   })
 }
+
+function readButton(book, cardRead) {
+    if(book.read == 1) {
+        cardRead.innerHTML = `<img src = "images/donereading.png" alt = "reading icon" width = "60" height = "60">`
+    }
+    else {
+        cardRead.innerHTML = `<img src = "images/reading.png" alt = "reading icon" width = "60" height = "60">`
+    }
+
+    cardRead.addEventListener('click', (event) => {
+        toggleRead(book, cardRead, event);
+    });
+}
+
+function toggleRead(book, cardRead, event) {
+    if(book.read == 1) {
+        book.read = 0;
+    }
+    else {
+        book.read = 1;
+    }
+    updateReadButton(cardRead, book.read); // Update the read button text based on the book's read status
+}
+
+function updateReadButton(cardRead, readStatus) {
+    if (readStatus == 1) {
+      cardRead.innerHTML = `<img src="images/donereading.png" alt="reading icon" width="60" height="60">`;
+    } else {
+      cardRead.innerHTML = `<img src="images/reading.png" alt="reading icon" width="60" height="60">`;
+    }
+  }
 
 function readInput() {
     let title = document.getElementById('book-title').value;
@@ -84,6 +121,19 @@ addBookButton.addEventListener('click', function(event) {
   
 
 addButton.addEventListener('click', function(event) {
+    validate();
     closeForm(event);
-    readInput();
 });
+
+function validate() {
+    if(document.getElementById('book-title').value === "") {
+        return;
+    }
+    if(document.getElementById('book-author').value === "") {
+        document.getElementById('book-author').value = "Anonymous";
+    }
+    if(document.getElementById('book-pages').value === "") {
+        document.getElementById('book-pages').value = 0;
+    }
+    readInput();
+}
