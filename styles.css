@@ -1,6 +1,8 @@
 html {margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
 .blur {
@@ -49,11 +51,18 @@ header {
     height: 45px;
     width: 126px;
     box-shadow: 3px 3px 4px black;
+    
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 /* FORM STYLING */
 
 .form {
+    position: fixed;
+    top: 169px;
+    
+
     background-color: #ff7477;
     border-radius: 33px;
     height: 418px;
@@ -71,7 +80,7 @@ header {
     padding: 5px 20px;
     box-shadow: 2px 2px 4px black;
     opacity: 0;
-  transform: scale(0.5);
+    transform: scale(0.5);
 }
 
 @keyframes formPopupIn {
@@ -142,15 +151,28 @@ input, select {
     align-self: center;
 }
 
+.card {
+  min-height: 114px;
+  min-width: 320px;
+  border-radius: 25px;
+  opacity: 85%;
+  background-color: #f4faff;
+
+  font-family: 'Open Sans';
+
+  margin-bottom: 22px;
+}
+
 /* FOOTER STYLING */
 .footer {
-    position: fixed;
-    bottom: 0;
+    margin-top: auto;
     width: 100vw;
     padding: 10px;
     background-color: #010419;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     color:#f4faff;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
