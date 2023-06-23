@@ -3,6 +3,12 @@ html {margin: 0;
     scroll-behavior: smooth;
     overflow-y: auto;
     box-sizing: border-box;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+html::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 
 .blur {
