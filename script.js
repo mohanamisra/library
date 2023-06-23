@@ -1,5 +1,6 @@
 let container = document.body; // Fastest way to select the body
 let addBookButton = document.querySelector('#add-book');
+let header = document.getElementsByTagName('header')[0];
 
 let form = document.querySelector('form');
 let others = document.querySelectorAll('body >*:not(.form)');
@@ -20,6 +21,13 @@ function makeCard(book) {
    let cardAuthor = document.createElement('div');
    let cardPages = document.createElement('div');
    let cardRead = document.createElement('div');
+   cardTitle = book.title;
+   cardAuthor = book.author;
+   cardPages = book.pages;
+   cardRead = book.read;
+
+   card.classList.add('card');
+   header.after(card);
 }
 
 function readInput() {
