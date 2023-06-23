@@ -70,8 +70,39 @@ header {
     font-family: 'Open Sans';
     padding: 5px 20px;
     box-shadow: 2px 2px 4px black;
-    border: 10px solid red;
+    opacity: 0;
+  transform: scale(0.5);
 }
+
+@keyframes formPopupIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes formPopupOut {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+  }
+
+  .form.active {
+    animation: formPopupIn 0.3s forwards;
+  }
+
+  .form.inactive {
+    animation: formPopupOut 0.3s forwards;
+  }
 
 input, select {
     border-radius: 10px;
@@ -109,10 +140,6 @@ input, select {
 
 .add-button {
     align-self: center;
-}
-
-.inactive {
-    display: none;
 }
 
 /* FOOTER STYLING */

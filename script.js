@@ -49,6 +49,7 @@ function readInput() {
 
 function closeForm(event) {
     if(!form.contains(event.target)) {
+        form.classList.remove('active');
         form.classList.add('inactive');
         others.forEach(e => e.classList.remove('blur'));
         document.removeEventListener('click', closeForm);
@@ -57,6 +58,7 @@ function closeForm(event) {
 
 function openForm() {
     form.classList.remove('inactive');
+    form.classList.add('active');
     others.forEach(e => e.classList.add('blur'));
     document.addEventListener('click', closeForm, true);
 }
@@ -67,12 +69,5 @@ addBookButton.addEventListener('click', function(event) {
     event.stopPropagation(); // Prevent event propagation to the document
   });
   
-    // form.classList.toggle('inactive');
-    // document.querySelectorAll('body >*:not(.form)').forEach(e => e.classList.add('blur'));
-    // others.forEach(e => e.classList.toggle('blur'));
-    // others.forEach(e => e.addEventListener('click', () => {
-    //     console.log('triggered');
-    //     form.classList.add('inactive');
-    // }));
 
 addButton.addEventListener('click', readInput);
