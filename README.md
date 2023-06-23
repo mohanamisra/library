@@ -4,3 +4,5 @@ This project was a basic practice in manipulating the DOM, utilising data from b
    I think a major (unintended even!) takeaway from this project was me learning to use and modify CSS animations (especially using keyframes).   
       
   It was also interesting to note how using just really basic UI/UX mockup skills makes the project look so much better and cleaner compared to starting out completely blind.   
+
+  Check out a <a href = "https://mohanamisra.github.io/library/"> LIVE PREVIEW!</a> (hosted by github pages)
