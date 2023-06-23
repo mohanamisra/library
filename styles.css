@@ -3,12 +3,6 @@ html {margin: 0;
     scroll-behavior: smooth;
     overflow-y: auto;
     box-sizing: border-box;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-}
-
-html::-webkit-scrollbar { 
-  display: none;  /* Safari and Chrome */
 }
 
 .blur {
@@ -32,7 +26,6 @@ body {
 header {
     margin: 0;
     background-color: #010419;
-    padding: 0px 20px;
 }
 
 .heading {
@@ -40,6 +33,13 @@ header {
     font-size: 54px;
     text-align: center;
     color: #f4faff;
+    margin: 0;
+}
+
+.heading.small {
+  font-size: 27px;
+  margin-top: 10px;
+  margin-bottom: 24px;
 }
 
 /* CONTENT STYLING */
@@ -172,6 +172,7 @@ input, select {
   margin-bottom: 22px;
   margin-left: 16px;
   margin-right: 16px;
+  margin-top: 16px;
   padding-left: 17px;
   padding-top: 10px;
   padding-bottom: 13px;
@@ -235,7 +236,8 @@ input, select {
 .footer {
     margin-top: auto;
     width: 100vw;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #010419;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
