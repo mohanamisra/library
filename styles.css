@@ -151,9 +151,12 @@ input, select {
     align-self: center;
 }
 
+/* CARD STYLING */
+
 .card {
   min-height: 114px;
   min-width: 320px;
+
   border-radius: 25px;
   opacity: 85%;
   background-color: #f4faff;
@@ -161,6 +164,32 @@ input, select {
   font-family: 'Open Sans';
 
   margin-bottom: 22px;
+  padding-left: 17px;
+  padding-top: 10px;
+  padding-bottom: 13px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  max-width: 220px;
+  font-weight: 900;
+  overflow-wrap: break-word;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.card-author {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.card-pages {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 11px;
 }
 
 /* FOOTER STYLING */

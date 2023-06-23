@@ -21,13 +21,20 @@ function makeCard(book) {
    let cardAuthor = document.createElement('div');
    let cardPages = document.createElement('div');
    let cardRead = document.createElement('div');
-   cardTitle = book.title;
-   cardAuthor = book.author;
-   cardPages = book.pages;
-   cardRead = book.read;
+   cardTitle.textContent = book.title;
+   cardAuthor.textContent = book.author;
+   cardPages.textContent = `${book.pages} Pages`;
 
    card.classList.add('card');
+   cardTitle.classList.add('card-title');
+   cardAuthor.classList.add('card-author');
+   cardPages.classList.add('card-pages');
+   cardRead.classList.add('card-read');
+
    header.after(card);
+   card.appendChild(cardTitle);
+   card.appendChild(cardAuthor);
+   card.appendChild(cardPages);
 }
 
 function readInput() {
