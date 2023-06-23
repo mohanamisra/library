@@ -21,20 +21,34 @@ function makeCard(book) {
    let cardAuthor = document.createElement('div');
    let cardPages = document.createElement('div');
    let cardRead = document.createElement('div');
+   let removeButton = document.createElement('div');
+
    cardTitle.textContent = book.title;
    cardAuthor.textContent = book.author;
    cardPages.textContent = `${book.pages} Pages`;
+
+   if(book.read == 1) {
+    cardRead.innerHTML = `<img src = "images/donereading.png" alt = "reading icon" width = "60" height = "60">`
+   }
+   else {
+    cardRead.innerHTML = `<img src = "images/reading.png" alt = "reading icon" width = "60" height = "60">`
+   }
+   
+   removeButton.innerHTML = `<img src = "images/remove.png" alt = "remove button" width = "31" height = "31">`
 
    card.classList.add('card');
    cardTitle.classList.add('card-title');
    cardAuthor.classList.add('card-author');
    cardPages.classList.add('card-pages');
    cardRead.classList.add('card-read');
+   removeButton.classList.add('remove-button');
 
    header.after(card);
    card.appendChild(cardTitle);
    card.appendChild(cardAuthor);
    card.appendChild(cardPages);
+   card.appendChild(cardRead);
+   card.appendChild(removeButton);
 }
 
 function readInput() {
