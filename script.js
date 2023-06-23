@@ -48,7 +48,7 @@ function readInput() {
 }
 
 function closeForm(event) {
-    if(!form.contains(event.target)) {
+    if((!form.contains(event.target)) || event.target == addButton) {
         form.classList.remove('active');
         form.classList.add('inactive');
         others.forEach(e => e.classList.remove('blur'));
@@ -70,4 +70,7 @@ addBookButton.addEventListener('click', function(event) {
   });
   
 
-addButton.addEventListener('click', readInput);
+addButton.addEventListener('click', function(event) {
+    closeForm(event);
+    readInput();
+});
