@@ -164,6 +164,8 @@ input, select {
   font-family: 'Open Sans';
 
   margin-bottom: 22px;
+  margin-left: 16px;
+  margin-right: 16px;
   padding-left: 17px;
   padding-top: 10px;
   padding-bottom: 13px;
@@ -171,6 +173,8 @@ input, select {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  position: sticky;
 }
 
 .card-title {
@@ -182,6 +186,9 @@ input, select {
 }
 
 .card-author {
+  max-width: 220px;
+  overflow-wrap: break-word;
+  flex-shrink: 0;
   font-weight: 700;
   font-size: 12px;
 }
@@ -197,7 +204,8 @@ input, select {
   max-width: 60px;
 
   position: absolute;
-  right: 35px;
+  right: 8px;
+  top: 3px;
 }
 
 .card-read > img {
@@ -207,11 +215,10 @@ input, select {
 .remove-button {
   max-height: 31px;
   max-width: 31px;
-  margin-top: 85px;
-  margin-right: 12px;
 
   position: absolute;
-  right: 35px;
+  right: 21px;
+  top: 90px;
 }
 
 .remove-button > img {
